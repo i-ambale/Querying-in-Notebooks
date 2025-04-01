@@ -12,7 +12,11 @@ The notebook is designed as part of a learning journey at ExploreAI Academy and 
 
 By the end of this notebook, you will be able to:
 
-✅ Use the SELECT statement to retrieve specific columns from tables in a SQLite database.✅ Apply the WHERE clause to filter results based on conditions.✅ Use the IN operator to match multiple values in a column.✅ Combine multiple conditions using logical operators such as AND and OR.✅ Execute practical queries to retrieve meaningful insights from the Northwind database.
+✅ Use the SELECT statement to retrieve specific columns from tables in a SQLite database.
+✅ Apply the WHERE clause to filter results based on conditions.
+✅ Use the IN operator to match multiple values in a column.
+✅ Combine multiple conditions using logical operators such as AND and OR.
+✅ Execute practical queries to retrieve meaningful insights from the Northwind database.
 
 💁️ Topics Covered
 
