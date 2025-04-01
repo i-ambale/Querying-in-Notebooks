@@ -1,90 +1,94 @@
 Querying in Notebooks - Northwind Database
 
-Overview
+© ExploreAI Academy
 
-This repository contains SQL queries and exercises for querying the Northwind SQLite database. These exercises are designed to help users gain hands-on experience with SQL and data analysis in Jupyter Notebooks.
+📚 Overview
 
-Learning Objectives
+This project contains an introductory SQL notebook where we explore and query a sample SQLite database for a retail company called Northwind. The Northwind database consists of multiple interrelated tables such as Employees, Orders, Customers, Products, and Suppliers.
 
-By working through these exercises, you will learn how to:
+The notebook is designed as part of a learning journey at ExploreAI Academy and is ideal for beginners looking to strengthen their SQL querying skills.
 
-Use basic SELECT statements to retrieve specific data from a database.
+🎯 Learning Objectives
 
-Apply the WHERE clause to filter data based on conditions.
+By the end of this notebook, you will be able to:
 
-Combine multiple conditions using logical operators such as AND and OR.
+✅ Use the SELECT statement to retrieve specific columns from tables in a SQLite database.✅ Apply the WHERE clause to filter results based on conditions.✅ Use the IN operator to match multiple values in a column.✅ Combine multiple conditions using logical operators such as AND and OR.✅ Execute practical queries to retrieve meaningful insights from the Northwind database.
 
-Use different logical operators to include or exclude specific values in a table, including the IN operator for multiple values.
+💁️ Topics Covered
 
-Getting Started
+Selecting columns from a table
 
-Prerequisites
+Filtering rows with WHERE
 
-To run the SQL queries in this repository, ensure you have:
+Using logical operators like AND and OR
 
-SQLite installed on your machine or access to an SQLite-compatible environment.
+Applying the IN clause to match multiple values
 
-Jupyter Notebook installed with the ipython-sql extension enabled.
+Querying and analyzing business-related data
 
-Northwind.db database file downloaded and placed in the working directory.
+📂 Files Included
 
-Installation
+Northwind.db – SQLite database used for this exercise.
 
-Clone this repository:
+Basic_SQL_Queries.ipynb – Jupyter notebook containing all queries and explanations.
 
-git clone https://github.com/i-ambale/Basic-SQL-Query.git
-cd Basic-SQL-Query
+README.md – This file.
 
-Ensure you have sqlite3 installed:
+💡 Prerequisites
 
-sqlite3 --version
+Basic knowledge of SQL syntax
 
-Install Jupyter Notebook (if not already installed):
+Jupyter Notebook or Google Colab environment
 
-pip install notebook
+SQLite or a SQL client for testing queries
 
-Install the required Jupyter SQL extension:
+🚀 How to Run
 
-pip install ipython-sql
+Clone this repository.
 
-Start Jupyter Notebook:
-Running Queries
+Open the notebook Basic_SQL_Queries.ipynb using Jupyter Notebook or upload it to Google Colab.
 
-Open the Jupyter Notebook file (.ipynb).
+Ensure the Northwind.db file is accessible in the same directory.
 
-Ensure that Northwind.db is in the working directory.
+Follow the instructions and run each cell to explore SQL basics.
 
-Use %%sql magic commands in notebook cells to execute SQL queries.
+📈 Exercises
 
-Example query:
+Below are the exercises included in the notebook:
 
-%%sql
-SELECT * FROM Customers WHERE Country = 'Germany';
+Exercise 1: Customers from Germany
 
-Repository Structure
+Retrieve the names of all customers located in Germany.
 
-Basic-SQL-Query/
-│── notebooks/          # Jupyter notebooks with SQL queries
-│── Northwind.db        # SQLite database file
-│── README.md           # This README file
+SELECT ContactName FROM Customers WHERE Country = 'Germany';
 
-Troubleshooting
+Exercise 2: Discontinued Products Over 30
 
-If sqlite3 is not recognized, ensure SQLite is properly installed.
+Find all products with a unit price greater than 30 that have been discontinued.
 
-If no output is displayed in queries, check for typos in table or column names.
+SELECT ProductName, Discontinued FROM Products WHERE UnitPrice > 30 AND Discontinued = 1;
 
-Ensure that Northwind.db is in the correct location and accessible.
+Exercise 3: Customers from USA or Canada
 
-License
+Retrieve the contact names and phone numbers of customers from either 'USA' or 'Canada'.
 
-This project is licensed under the MIT License.
+SELECT ContactName, Phone FROM Customers WHERE Country IN ('USA', 'Canada');
 
-Acknowledgments
+Exercise 4: Orders from Specific Customers
 
-ExploreAI Academy for providing structured SQL training materials.
+Retrieve all orders placed by customers 'VINET', 'QUICK', or 'SUPRD' and shipped via shipper 1 or 2.
 
-The Northwind Database is a commonly used dataset for SQL practice.
+SELECT * FROM Orders WHERE CustomerID IN ('VINET', 'QUICK', 'SUPRD') AND ShipVia IN (1, 2);
+
+Challenge Question: Employees in Sales Based in London
+
+Find employees who are either Sales Representatives or Sales Managers and are based in London.
+
+SELECT LastName, FirstName FROM Employees WHERE Title IN ('Sales Representative', 'Sales Manager') AND City = 'London';
+
+💍 Contact
+
+If you have any feedback or suggestions, feel free to reach out or open an issue.
 
 Happy querying! 🚀
 
