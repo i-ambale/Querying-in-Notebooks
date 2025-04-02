@@ -54,7 +54,7 @@ SQLite or a SQL client for testing queries
 
 Clone this repository.
 
-Open the notebook Basic_SQL_Queries.ipynb using Jupyter Notebook or upload it to Google Colab.
+Open the notebook Querying-in-Notebooks.ipynb using Jupyter Notebook or upload it to Google Colab.
 
 Ensure the Northwind.db file is accessible in the same directory.
 
